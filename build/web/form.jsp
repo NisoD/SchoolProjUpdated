@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/formCSS.css">
 
     </head>
-    <body dir="ltr"  background="Pictures/Bank.jpg">
+    <body dir="ltr" >
         
         <!--navbar-->
         <div id="navBarWrapper">
@@ -27,12 +27,12 @@
               <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li><a href="index.jsp">Home</a></li>
-                            <li class="active"><a href="form.jsp">Registration Form</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
+                            <li class="active"><a href="form.jsp">Registration</a></li>
+                            <li><a href="products.jsp">Our Products</a></li>
+                            <li><a href="about.jsp">About</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="Registration.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                         </ul>
                     </div>
@@ -42,20 +42,20 @@
         
         <div id="siteContent">
             <h3 style=" font-family:sans-serif" align="center"><u>Sign up form</u></h3><br><br>
-            <form name="form" action="register.jsp  " method="post" onsubmit="return checkForm()" >
-                <div>
+            <form name="form" action="insertToDB.jsp" method="get" onsubmit="return checkForm()" >
+                <div type="submit">
                     <table dir="ltr" align="center" border="0" >
                         <tr>
                             <td><font  face="cursive">Full Name:</font></td>
-                                <td><input type="text" name="idNum" maxlength="9"></td>
+                                <td><input type="text" name="idNum"  />></td>
                         </tr>
                         <tr>
                             <td><font  face="cursive">Username:</font></td>
-                            <td><input type="text" name="userName"></td>
+                            <td><input type="text" name="username" type="submit" ></td>
                         </tr>
                         <tr>
                             <td><font  face="cursive">Password</font></td>
-                            <td><input type="password" name="pwd"></td>
+                            <td><input type="password" name="pwd" type="submit" ></td>
                         </tr>
                         <tr>
                             <td><font  face="cursive">Confirm:</font></td>
@@ -63,7 +63,7 @@
                         </tr>
                         <tr>
                             <td><font  face="cursive">Mail:</font></td>
-                            <td><input type="text" name="email"></td>
+                            <td><input type="text" name="email" type="submit" > </td>
                         </tr>
                         <tr>
                             <td><font  face="cursive">Phone:</font></td>
@@ -100,9 +100,9 @@
                         <tr>
                             <td><font  face="cursive">Gender:</font></td>
                             <td><font  face="cursive">Male</font>
-                                <input type="radio" name="gender" value="Male" >&nbsp&nbsp&nbsp
+                                <input type="radio" name="gender" value="Male" type="submit"  >&nbsp&nbsp&nbsp
                                 <font  face="cursive">Female</font>
-                                <input type="radio" name="gender" value="Female">
+                                <input type="radio" name="gender" value="Female"type="submit" >
                             </td>
                         </tr>
                         <tr>
@@ -125,6 +125,7 @@
 
                 </div>
             </form>
+
         </div>
         <script type="text/javascript" src="JavaScript/formJS.js" ></script>
         <!--must be included in every page for bootstrap-->
@@ -132,5 +133,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     </body>
 </html>

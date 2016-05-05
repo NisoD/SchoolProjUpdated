@@ -30,11 +30,11 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="index.jsp">Home</a></li>
                             <li><a href="form.jsp">Registration</a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
+                            <li><a href="products.jsp">Our Products</a></li>
+                            <li><a href="about.jsp">About</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="form.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                         </ul>
                     </div>

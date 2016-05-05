@@ -38,22 +38,6 @@ function phoneCheck()
         return false;
     return true;
 }
-
-function countryCheck()
-{
-    var place;
-    place = document.form.country.selectedIndex;
-    if (place == 0)
-        return false;
-    return true;
-}
-
-//checks if terms of use is checked
-function tou() {
-    if (document.form.cbterms.checked == true)
-        return true;
-    return false;
-}
 function checkForm()
 {
 
@@ -65,11 +49,11 @@ function checkForm()
         return false;
     }
 
-    if (isEmpty(document.form.userName.value))
+    if (isEmpty(document.form.username.value))
     {
         window.alert("Please enter your username");
-        document.form.userName.focus();
-        document.form.userName.select();
+        document.form.username.focus();
+        document.form.username.select();
         return false;
     }
     if (isEmpty(document.form.pwd.value) ||
@@ -108,20 +92,26 @@ function checkForm()
         window.alert("Choose a telephone numbering plan");
         document.form.kidomt.focus();
         document.form.kidomt.select();
+        return false;
     }
+    
     if (!countryCheck()) {
         window.alert("Choose a country");
         document.form.country.focus();
         document.form.country.select();
+        return false;
     }
     if (!genderCheck()) {
         window.alert("Choose a gender");
-        document.form.gender.focus();
-        document.form.gender.select();
+        return false;        
+        
+
     }
     if (!tou()) {
         window.alert("Please agree to our terms");
         document.form.cbterms.focus();
         document.form.cbterms.select();
+        return false;
     }
+    return true;
 }
